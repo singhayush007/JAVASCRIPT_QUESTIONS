@@ -1,0 +1,84 @@
+Explain the concept of event Deligation in JavaScript.
+-> Event deligation is a technique where you can attach a single event listener to a parent element instead of multiple listerners to individul childs elements . This improves perfromances and simplifies event handling , especially when dealing with dynamically added elements.
+
+What are generators in javascript , and how do they differ from regular functions.
+-> Generators are a special type of function thta can pause and resume execution . They are defined using the function syntax and use the yield keyword to return values one at a time .
+Regular functions run to completion when called, while generators can yield multiple values over time.
+
+What are JavaScript modules , and how do you use import and export.
+-> JavaScript Modules: Allows you to break your code into seperate files making it easier to manage and reuse . you can export functions, objects or variables, from one module and import them into another.
+
+What is the proxy object in JavaScript, and what are it's use cases.
+-> A proxy isa javascript bject that allows you to create a wrapper around another object ,enabling you to interact and redefine fundamental opearations for that object. This includes property access, assignment , enumeration and funciton invocation. Proxies are useful for implementing custom behaviours such as logging , validation and more.
+
+Real Life Example:
+Let's consider a bankaccount system where you want to track deposits and withdrawals for security urpose . By using a proxy, you can log these actions whenenver they occur.
+
+Definition of GET and SET
+
+get -> Interacts property access , allowing you to define custom behaviour when reding a property.
+set -> Interacts propery assignment , enabling you to define custom behaviour when updating a property.
+
+
+Explain Currying in javascript.
+--> Currying is a functional programming technique where a function is transformed into a sequence of function , each taking a simple argument . This allows you to create more reusable and configurable functions.
+
+
+What are the differences betweeb deep cloning / copy cloning and shallow cloning / copy in JavaScript? How would you impleemnt both?
+--> Shalllow cloning creates a new object but only copies the reference of nested objects , not the actual objects . Changes to nested objects in theclone affect the original object.
+--> Deep cloning creates a new object and recursively copies all teh object and values, meaning that chanegs to nested objects in the clone do not affect the original object.
+
+What is memoization , and how would you implement it in JavaScript.
+--> Memoization is an iptimization used to speed up function by caching their results based on input arguments . If the function is called again with the same arguments , it returns the cached result instead of rcalculating it.
+
+
+Explain the concept of weak maps and weak sets in JavScript.
+--> WeakMap and WeakSet are collections that allows you to store object weakly. This meas that if there are no other references to the objects stored ina weakMap or WeakSet, they can be garbage collected , preventing memory leaks .
+WeakMap : Stress key-value pairs where keys are objects and values can be any type .
+WeakSet : Stores unique obects (no primitive values).
+
+Real Life Analogy: Imagine you have a sticy note(the object) that you temporily attach to a fride (WeakMap/WeakSet). Once you no longer need the note , you can throw it away.
+Similarly , WeakMap/WeakSet will autmatically remove the object when it's no longer needed or referenced.
+
+WeakMap and WeakSet are particularly useful in cases where you wn tto manage objects without worrying about memory leaks
+, such as managing DOM elements or caching data for objects that may be removed or no longer used.
+
+What is the difference between function declaration and function expressions.
+--> Function Declaration : A function defined using the function keyword followed bya name > It is hoisted , meaning it can be called before it's definition in the code.
+
+--> Function Expressions: A function defined within an expressions , often assigned to a variable.it is not hoisted , meaning it can only be clled after it's definition.
+
+
+What is a javascript Symbol, and when woud you use it ?
+--> A symbol is a unique , immutable primitive value in JavaScript , typically used as a key for object properties.
+Each Symbol is guranteed to be unique, even if they have the same description . They are useful when you want to create private or hidden properties that won't clash with other properties, even if they share the same name .
+
+Key points:
+-> Uniqueness : Every Symbol is unique.
+-> Use Case: Symbols are often used as kesy in object to avoid property name collisions and ensure that properties are hidden from methods like Object.Keys().
+
+Where would you use Symbols?
+--> Avoiding Name Clashes: When multiple part of your codebase may use the same property names, Symbols ensures there are no collisons.
+--> Creating Hidden or Private Properties: Since Symbols are not enumerate, tehy can be used to store metadata or hidden values in objects that you don't want to expose accidently.
+--> Implementing Protocols: Symbols are useful in libraries where you want to impleemtn custom behaviours without conflicting with existing object properties (eg. iterators using Symbol.iterator).
+
+How do you apply call , and bind methods work in JavaScript?
+--> apply(): Calls a function with a given this value and arguments provide as an array .
+
+--> call(): Similar to apply(), but takes arguments individually.
+
+--> bind(): Creates a new function that , when we called has it's this keyword set to the provide value.
+
+What is the purpose of the sync iterator and how does it differ from a regular iterator?
+--> As async iterator is used to iterate over data asynchronously such as when fetching data from api . it allows you to work with promise in a for.. of loop
+--> A regular iterator works synchronously and cannot handle promises.
+
+How you can pevent object mutation in JavaScript.
+
+--> To prevent object mutation , you can use the following techniques.
+
+* Use object , freeze() to make an object immutable.
+* Use spread operator or methods like object , assign () to create shallow copies.
+* For deep immutbility , you can create utility functions that recursively freeze objects 
+
+

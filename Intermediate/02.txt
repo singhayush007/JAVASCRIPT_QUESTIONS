@@ -1,0 +1,61 @@
+What is the difference between synchronous and asynchronous programming in JavaScript.
+
+->Synchronous Programming means that tasks are executed one after the other . Each task must finish before the next one starts. This can block the execution if a task take a long time.
+->Asynchronous Programming allows aks to run soncurrently . this means that while one task is waiting (liek fetching data), other tasks can continue executing without waiting.
+
+Explain the concept of promises in JavaScript.
+->A promise is an object that represent the eventual completion (or failure) of an asynchronous operation and its resulting value. It allows you to write clener code without nesting ,ultiple callBacks.
+State of Promises:
+* Pending: The intial state, neither fullfiled nor rejected.
+* Fulfiled : The operation completed successfully.
+* rejected : The operation failed.
+
+What are callback functions? How are they used?
+->A callback function is a function that passes as an arguemnt to another function and is executed after some operation has been completed .This is a commonly used in asynchronous programming.
+
+What are Javascript prototypes and how they work?
+->Prototypes are a mechansim by which JavaScript objects inherit features from one another . Every Javascript object has a prototype object from which it can inherit properties and methods.
+
+What is event loop in javascript ? How does it work with asynchronous code ?
+->The event Loop is a mechanism that allows JavaScript to perform non-blocking operations despite being single-threaded . It manages the execution of code , collects and processes events and execution queued sub-tasks.
+->When asynchronous taks (like fetching data) are completed , their callbacks are added to the callback queue. The evnent loop continuoulsy checks the call stack and the callback queue to execute tasks.
+
+*Illustrations of the EventLoops:
+1: Call Stack : Where function are executed
+2: Web API's : For handling asynchronous tasks like setTimeout, fetch
+3: Callback Queue : Holds the callback from compleetd asynchronous tasks.
+4: Event Loop: Checks if the call stack is empty , then moves the first callback from teh callback queue to the call stack.
+
+Explain how map() , filter() , reduce() function work.
+-> These are higher order function for manipulating arrays:
+
+map(): Creates a new array by applying a function to each element if the original array.
+filter() : Creates a new array with all eleemnts that pass the test implementted by the provided function.
+reduce() : Executes a reducer function on each element of the array , resulting in a single output value. 
+
+What is the purpose of async and await in JavaScript?
+-> Async and await are used to work with promisies in a more readable way.
+-> Async is a keyword that you can place before a function declaration to indicate that the function will return a promise.
+-> Await is used inside an async function to pause execution until the promise  resolved.
+
+How does javascript handle memory mnagement and garbage collection?
+-> JavaScript hs automatically memory management , which means that developers do not need to manally allocate free memory.
+-> Garbage collectio is the process of automatially reclaiimng memory that is no longer in use. It tracks object that are no longer referenced in the cde and frees thier memory.
+-> JavaScript primarily uses mark and sweep garbage collection , where it marks reachable objects and sweeps away unmarked (unreachable) objects.
+
+What is the debounce function in javascript ? How is it different from throttle ?
+-> Debounce 
+Main Definition: Debounce ensure that a function is executed only after a specified timehas passed since. It was last invoked .Thsi is helpful when you want to avoid running a function too frequently , such as during user input.
+
+Real Life Example: Imagine you are typing in a search box . You don't wnt to search every time a letter is typed instead you want the search to occcur after you stop typing for a moment .
+
+-> Throttle 
+Main Definition: Throttle ensures that a function is executed at most once in a specified period of time.This is useful for events that can occur continuoulsy , such as acrolling or resizing a window.
+Real Life Example: Think about a traffic light. It changes color at set ntervals , regardless of whether cas are still arriving . Throttling means allowing an action to happen at a limited rate.
+
+What is destructuring in JavaScript? 
+-> Destructuring is a syntax that allows you to unpack values from arrays or properties from objects into distinct variables.
+
+
+
+

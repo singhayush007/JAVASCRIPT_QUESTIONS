@@ -1,0 +1,79 @@
+1: What is JavaScript? How is it different from java?
+
+JavaScript is a lightweight , interpreted programming language primarily used for enhancing interactivity on websites. It is a core technology of the world Wide web, alongside HTML and CSS.
+
+2: Difference from Java:
+
+Type : Java is a statically typed, compiled language, while JavaScript is a dynamically typed, interpreted language.
+
+Syntax: Java uses class based object oriented programming , while javascript uses prototype-based object-oriented programming.
+
+Execution Environment : Java runs on the Java Virtual Machine (JVM) while javascript runs in web browser or on servers (like node.js)
+
+3: Explain difference between var , let , and const .
+
+var : Function Scoped or globally scoped.
+      can be redecalared and updated.
+
+Let : Block-Scoped.
+      Can be updated but not be re-declared in the same scope. 
+
+Const : Block-Scoped.
+        Cannot be updated or re-declared . However it can hold mutable objects.
+
+
+4: What are data types in JavaScript?
+
+Javascript has two main categories of datatypes:
+
+* Primitive Data types: 
+Undefined : A variable that has been declared but has not been assigned a value.
+Null : Represents a deliberate non-value.
+Boolean : Represents a logical entity and can have two values : true and false
+Number: Represents both integer and floating-point numbers.
+BigInt: An arbitrary precision integer.
+String: Represents a sequence of characters.
+Symbol: A unique and immutable value often used as object property keys.
+
+* Non Primitive Data types or Refrence Data Types:
+Object: A collection of key-value pairs.
+Array: A specially type of object used to store lists of values.
+Function: A callable object.
+
+5: What is hoisting in JavaScript?
+Hoisting is a a javascript mechanism where variable and function declarations are moved to the top of their contning scopr during the compil phase. This means you can move variables and functions before they are declared in the code.
+
+6: What are closures in JavaScript
+A closure is a function that retains access to its outer scope, even when the function is executed outside that scope. Closures are created every time a functon is created , allowing for data encapsulation.
+
+7: What is the difference between ==  and === in javascript?
+==(Abstract Equality Operator)
+Performs type coercion if the operands are of different types.
+Example 0 == '0' evaluates to true.
+===(Strict Equality Operator)
+Checks the both value and type without coercion.
+Example 0 === '0' evalutes to false
+
+8: Explain how this keyword works in javascript.
+
+The this keywrod refers to the context in which a function is called. Its value is determined by how the function is invoked:
+* In a method, it refers to the object the method is called on.
+* In a regular function it refers to the global object(or undefined in strict mode).
+* In an arrow function , this is lexically inherited from the enclosing scope.
+
+9: What is  an event in Javascript? How do you prevent default behaviour.
+
+An event is an action or occurence thet happens in the browser , such as clicks, key presses, or page load , you can prevent the default behaviour of an event using the event.preventDefault() method.
+
+10: What are arrow functions, and how they differeent from regular functions.
+Arrow functons are a more concise syntax for writing function expressions. They from regular functions in several ways:
+* Do not have their own this context (inherited from the enclosing scope)
+* Cannot be used as constructors(i.e, cannot use the new keyword)
+* Do not have the arguemtns object.
+
+11: What is NaN in javascript? How do you check if a value is Nan?
+NaN stands for "Not  a Number" and indicates that a value is not a valid number. It is a special numeric value resulting from invalid mathematical operations(like dividing zero by zero)
+
+You can check if a value is NaN using the isNaN() function or Number. isNaN() for a more relaibale check.
+
+
