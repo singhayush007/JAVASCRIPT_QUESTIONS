@@ -1,0 +1,15 @@
+Print all  the element of the nested array arr= [1, [2 ,[3, 4],5],6]
+
+Reverse words in a string in JavaScript
+
+Check for Balanced Parenthesis.
+
+Remove duplicates froma na array.
+
+Find the largest sum of contiguous subarray (Kadanes' Algorithm).
+
+Find the first Non- Repeated Character in a string.
+
+Given an array of n concecutive integers from 1 to n , where one integer is missing write a javascript function to find the missing number with a time complexity of 0(n).
+
+
